@@ -2,7 +2,7 @@
 .net and .net core client for Vipps Login
 
 # how to use
-```
+```csharp
 
 VippsLoginManager vipps = new VippsLoginManager(VippsEnvironment.Prod, "client_id", "client_secret", "redirect_url");
 
