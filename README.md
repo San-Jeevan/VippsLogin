@@ -1,7 +1,7 @@
 # VippsLogin
 .net and .net core client for Vipps Login
 
-# how to use (.net core, for regular .net remove the await)
+# how to use (for regular .net remove the await)
 ```csharp
 
 VippsLoginManager vipps = new VippsLoginManager(VippsEnvironment.Prod, "client_id", "client_secret", "redirect_url");
