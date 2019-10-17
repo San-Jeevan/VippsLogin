@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Gressquel.Vippslogin</id>
+    <version>1.0.0</version>
+    <authors>Jeevan Sivagnanasuntharam</authors>
+    <owners>Jeevan Sivagnanasuntharam</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/San-Jeevan/VippsLogin</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Vipps login client for .net and .net core</description>
+    <releaseNotes>Initial release, used in production</releaseNotes>
+    <tags>Vipps</tags>
+    <dependencies>
+    <group targetFramework="net461">
+        <dependency id="RestSharp" version="105.0.0" />
+         <dependency id="Newtonsoft.Json" version="9.0.1" />
+    </group>
+
+    <group targetFramework=".NETCoreApp2.0">
+      <dependency id="Newtonsoft.Json" version="9.0.1" />
+    </group>
+
+    </dependencies>
+  </metadata>
+<files>
+    <file src="VippsLogin461\bin\Release\VippsLogin461.dll" target="lib\net461" />
+    <file src="VippsLoginNetCore\bin\Release\netcoreapp2.0\VippsLoginNetCore.dll" target="lib\netcoreapp2.0" />
+</files>
+</package>
