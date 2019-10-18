@@ -17,4 +17,5 @@ var userinfo = await vipps.GetUserInfo();
 
 # nuget package
 https://www.nuget.org/packages/Gressquel.Vippslogin/
+
 can be found by searching in visual studio for "vipps" also
