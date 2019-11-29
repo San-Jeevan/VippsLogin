@@ -19,12 +19,14 @@ namespace VippsLoginNetCore
         private string auth_endpoint = "";
         private string userinfo_endpoint = "";
         private string access_token = "";
-
-        public VippsLoginManager (string api_endpoint ,string client_id, string client_secret, string redirect_url) {
+        private string state = "";
+        
+        public VippsLoginManager (string api_endpoint ,string client_id, string client_secret, string redirect_url, string state) {
             this.client_id = client_id;
             this.client_secret = client_secret;
             this.redirect_url = redirect_url;
             this.api_endpoint = api_endpoint;
+            this.state = state;
             token_endpoint = this.api_endpoint + "/oauth2/token";
             auth_endpoint = this.api_endpoint + "/oauth2/auth";
             userinfo_endpoint = this.api_endpoint + "/userinfo";
@@ -37,7 +39,7 @@ namespace VippsLoginNetCore
 
         public string GetRedirectUrl()
         {
-            return auth_endpoint + $"?client_id={client_id}&response_type=code&scope={scope}&state=initializingsignin&redirect_uri={redirect_url}";
+            return auth_endpoint + $"?client_id={client_id}&response_type=code&scope={scope}&state={state}&redirect_uri={redirect_url}";
         }
 
         public async Task<GetTokenResponse> GetToken(string authorization_code) {
