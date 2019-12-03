@@ -45,6 +45,7 @@ namespace VippsLoginNetCore
         public string phone_number { get; set; }
         public string sid { get; set; }
         public string sub { get; set; }
+        public string nnin { get; set; }
     }
 
     public class OAuthToken
