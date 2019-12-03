@@ -42,7 +42,7 @@ namespace VippsLoginNetCore
             return auth_endpoint + $"?client_id={client_id}&response_type=code&scope={scope}&state={state}&redirect_uri={redirect_url}";
         }
 
-        public async Task<GetTokenResponse> GetToken(string authorization_code) {
+        public async Task<GetTokenResponse> GetAndSetAccessToken(string authorization_code) {
             var response = new GetTokenResponse();
 
             var plainTextBytes = Encoding.UTF8.GetBytes($"{client_id}:{client_secret}");
