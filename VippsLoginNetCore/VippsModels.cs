@@ -45,13 +45,14 @@ namespace VippsLoginNetCore
         public string phone_number { get; set; }
         public string sid { get; set; }
         public string sub { get; set; }
+        public string nnin { get; set; }
     }
 
     public class OAuthToken
     {
         public string access_token { get; set; }
         public int expires_in { get; set; }
-        public int id_token { get; set; }
+        public string id_token { get; set; }
         public string scope { get; set; }
         public string token_type { get; set; }
     }
